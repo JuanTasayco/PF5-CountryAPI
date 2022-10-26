@@ -1,0 +1,21 @@
+<app-nav></app-nav>
+<section class="Home container my-5 ">
+    <div class=" Home-content row position-relative">
+        <div class="Home-column col-xl-9 animate__animated animate__headShake">
+            <h1 class="Home-h1 text-center text-xl-start ">Busca datos importante de países!</h1>
+        </div>
+        <div class="Home-column Home-column--absolute col-xl-6 h-100 animate__animated animate__bounce">
+            <img src=" assets/mapMenu.jpg" alt="" class="Home-img img-fluid h-100">
+        </div>
+    </div>
+</section>
+<div class="Home-menu container">
+    <ul class="Home-ul nav nav-pills d-flex justify-content-center mb-4">
+        <li class="Home-li nav-item" *ngFor="let dir of rutas"><a class="nav-link"
+                [routerLink]="dir.ruta"
+                routerLinkActive="active"
+                >{{dir.nombre}}</a></li>
+    </ul>
+
+    <router-outlet></router-outlet>
+</div>

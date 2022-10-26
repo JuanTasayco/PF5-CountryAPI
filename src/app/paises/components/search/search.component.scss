@@ -1,0 +1,8 @@
+@use "src/_custom" as *;
+
+
+.Search {
+    @include media-breakpoint-up(lg) {
+        width: 50%;
+    }
+}

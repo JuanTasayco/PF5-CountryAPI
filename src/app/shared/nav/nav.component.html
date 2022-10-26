@@ -1,0 +1,25 @@
+<header class="Header">
+    <nav class="Header-nav navbar ">
+        <div class="Header-container container-fluid">
+            <button class="Header-button navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#navMap">
+                <span class="Header-span navbar-toggler-icon"></span>
+            </button>
+            <div class="Header-canvas offcanvas offcanvas-start " tabindex="-1" id="navMap">
+                <div class="Header-canvas Header-canvas--header offcanvas-header">
+                    <h5 class="Header-h5 offcanvas-title" id="offcanvasDarkNavbarLabel">Rest Country v0.1</h5>
+                    <button type="button" class="Header-button btn-close btn-close-dark" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="Header-canvas Header-canvas--body offcanvas-body">
+                    <ul class="Header-ul nav nav-pills d-flex flex-column">
+                        <li class="Header-li nav-link" *ngFor="let dir of rutas">
+                            <a class="Header-a nav-link" [routerLink]="dir.ruta"
+                                routerLinkActive="active">{{dir.nombre}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

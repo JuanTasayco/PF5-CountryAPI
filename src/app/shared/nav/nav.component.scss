@@ -1,0 +1,12 @@
+@use "src/_custom" as *;
+
+
+.Header {
+
+    &-canvas {
+        background-color: $dark;
+        &--header {
+            color: gray;
+        }
+    }
+}

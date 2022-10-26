@@ -1,0 +1,26 @@
+//GLOBALS VARIABLES 
+$family: 'Inter', sans-serif;
+$font-family-sans-serif: $family;
+
+$navbar-padding-y: 0;
+$navbar-light-color: white;
+$navbar-light-toggler-border-color: white;
+$nav-link-color: white;
+$nav-link-hover-color: white;
+$input-bg: linear-gradient(90deg, rgba(152,151,75,1) 0%, rgba(244,255,186,1) 53%, rgba(152,151,75,1) 74%);
+$card-bg: #B8B9B6;
+$input-border-color: #B8B9B6;
+$input-focus-box-shadow: 0rem 0rem 1rem#F3CA4C;
+
+//navPill
+$nav-pills-link-active-bg: #f4ffba;
+$nav-pills-link-active-color: black;
+$input-focus-border-color: #F3CA4C;
+
+$danger: #F3CA4C;
+$primary :#f4ffba;
+
+$form-select-bg:rgb(152,152,152);
+$form-select-indicator-color: #F3CA4C;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

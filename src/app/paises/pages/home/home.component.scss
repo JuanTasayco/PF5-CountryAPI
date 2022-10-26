@@ -1,0 +1,54 @@
+@use "src/_custom" as *;
+
+body{
+        background: $dark;  
+}
+
+.Home {
+    &-h1 {
+        font-weight: bold;
+        font-size: 3rem;
+        mix-blend-mode:hard-light;
+        background: linear-gradient(90deg, rgba(152,151,75,1) 0%, rgba(244,255,186,1) 53%, rgba(152,151,75,1) 74%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        @include media-breakpoint-up(lg) {
+            font-size: 6rem;
+        }
+
+        z-index: 999;
+    }
+
+
+    &-column {
+        display:flex;
+        justify-content: center;
+        &--absolute {
+            right: 5%;
+            z-index: -1;
+
+            @include media-breakpoint-up(xl) {
+                position: absolute;
+            }
+        }
+
+    }
+
+    &-img {
+        border-radius: 10%;
+        padding: 1rem;
+        max-height:25rem ;
+        @include media-breakpoint-up(xl) {
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+         
+        }
+
+    }
+
+    &-li{
+        font-size: 1.1rem;
+        &:hover{
+            cursor:pointer;
+        }
+    }
+}

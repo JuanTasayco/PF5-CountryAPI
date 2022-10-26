@@ -1,0 +1,31 @@
+<main class="Fontreras container px-5">
+    <h4 class="Fontreras-h4 mb-3 ">Filtra y encuentra tus fronteras:</h4>
+    <form class="Fontreras-form row row-cols-md-2 gy-3" [formGroup]="formulario">
+        <div class="Fontreras-containerSelect">
+            <label for="continente" class="form-label">Continente</label>
+            <select class="Fontreras-select form-select" formControlName="continente">
+                <option class="Fontreras-option" selected value="">--Seleccionar continente</option>
+                <option [value]="region" class="Fontreras-option" *ngFor="let region of getRegiones">{{region}}</option>
+            </select>
+        </div>
+        <div class="Fontreras-containerSelect">
+            <label for="pais" class="form-label">País</label>
+            <select class="Fontreras-select form-select" formControlName="pais">
+                <option class="Fontreras-option" value="" selected>--Seleccionar país</option>
+                <option [value]="pais.cca3" *ngFor="let pais of paises">{{pais.name.common}}</option>
+            </select>
+        </div>
+        <div class="Fontreras-containerSelect">
+            <label for="fronteras" class="form-label">Fronteras</label>
+            <select class="Fontreras-select form-select" formControlName="fronteras">
+                <option class="Fontreras-option" value="">--Seleccionar fronteras</option>
+                <option [value]="codeBorder.cca3" *ngFor="let codeBorder of paisBorder">{{codeBorder.name.common}}</option>
+            </select>
+        </div>
+    </form>
+
+    <section class="Fontreras-pais mt-5">
+        <app-solo-pais-design [paisComponent]="soloPais"></app-solo-pais-design>
+    </section>
+</main>
+

@@ -1,0 +1,11 @@
+<div class="mt-5 px-5">
+    <app-solo-pais-design [paisComponent]="soloPais"></app-solo-pais-design>
+</div>
+
+
+<ng-container *ngIf="existeUrlErroneo">
+    <div class="text-center mt-5 text-danger">
+        <h2 class="display-1 fw-bold">{{'El URL especiFICADO es erroneo' | titlecase}} </h2>
+        <h2 class="display-1 fw-bold">404 ERROR</h2>
+    </div>
+</ng-container>

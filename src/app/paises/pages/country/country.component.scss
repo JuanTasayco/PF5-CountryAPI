@@ -1,0 +1,11 @@
+@use "src/_custom" as *;
+
+.Country {
+    &-alert {
+        margin: auto;
+
+        @include media-breakpoint-up(lg) {
+            width: 60%;
+        }
+    }
+}

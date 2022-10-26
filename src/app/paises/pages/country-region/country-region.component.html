@@ -1,0 +1,8 @@
+<app-search (emitValor)="getValue($event)"  [placeholderComponent]="'Busca por región...'"></app-search>
+
+<div *ngIf="noHayTermino" class="Country-alert alert alert-danger mt-3" role="alert">
+    <small>No podemos encontrar '{{termino}}' en nuestra BBDD</small>
+</div>
+<div class="container mt-5">
+    <app-table-pais [paisesComponent]="paises" *ngIf="paises"></app-table-pais>
+</div>

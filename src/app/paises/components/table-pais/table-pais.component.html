@@ -1,0 +1,27 @@
+<ng-container *ngIf="paises" class="Table">
+    <p-table [value]="paises" class="Table" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+        responsiveLayout="scroll" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[10,20]">
+        <ng-template pTemplate="header">
+            <tr class="Table-tr Table-tr--header">
+                <th class="Table-th">Flag</th>
+                <th class="Table-th">Code</th>
+                <th class="Table-th">Name</th>
+                <th class="Table-th">Capital</th>
+                <th class="Table-th">Region</th>
+                <th class="Table-th">Population</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-pais>
+            <tr class="Table-tr Table-tr--body">
+                <td class="Table-th"><img [src]="pais.flags.png" alt="flag" height="20rem" width="30rem"></td>
+                <td class="Table-th">{{pais.cca3}}</td>
+                <td class="Table-th"><a [routerLink]="['/paises/',pais.cca3]">{{pais.name.common}}</a></td>
+                <td class="Table-th">{{pais.capital}}</td>
+                <td class="Table-th">{{pais.region}}</td>
+                <td class="Table-th">{{pais.population}}</td>
+            </tr>
+        </ng-template>
+
+    </p-table>
+</ng-container>
