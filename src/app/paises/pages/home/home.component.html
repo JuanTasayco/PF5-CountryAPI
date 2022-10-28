@@ -11,10 +11,8 @@
 </section>
 <div class="Home-menu container ">
     <ul class="Home-ul nav nav-pills d-flex justify-content-center mb-4">
-        <li class="Home-li nav-item" *ngFor="let dir of rutas"><a class="nav-link"
-                [routerLink]="dir.ruta"
-                routerLinkActive="active"
-                >{{dir.nombre}}</a></li>
+        <li class="Home-li nav-item" *ngFor="let dir of rutas"><a class="nav-link" [routerLink]="dir.ruta"
+                routerLinkActive="active">{{dir.nombre}}</a></li>
     </ul>
 
     <router-outlet></router-outlet>
